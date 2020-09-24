@@ -1,0 +1,6 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [ "javascript", "typescript", "json", "typescriptreact", "javascriptreact", "typescript.tsx", "css", "markdown" ],
+    "eslint.filetypes": [ "javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx" ],
+    "diagnostic.virtualText": true,
+    "suggest.noselect": false
+}
