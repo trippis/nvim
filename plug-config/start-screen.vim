@@ -1,3 +1,5 @@
+let $nvimpath = stdpath("config")
+
 let g:startify_session_dir = '~/AppData/Local/nvim/session'
 
 let g:startify_lists = [
@@ -8,9 +10,9 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-          \ { 'i': '~/AppData/Local/nvim/init.vim' },
-          \ { 'n': '~/AppData/Local/nvim' },
-          \ { 'r': '~/AppData/Loca/nvim/repos' }
+          \ { 'i': $nvimpath . '/init.vim' },
+          \ { 'n': $nvimpath },
+          \ { 'p': $HOME . '/repos' }
           \ ]
 
 let g:startify_session_autoload = 1
