@@ -2,7 +2,8 @@
 if !exists("g:os")
     if has("Win64") || has("Win32") || has("Win16")
         let g:os = "Windows"
-    else 
+        let $TMP = "/tmp" " needed for the bash function to work with temp files
+    else
         let g:os = substitute(system('uname'), '\n', '', '')
     endif
 endif
@@ -16,6 +17,7 @@ endif
 
 source $nvimpath/vim-plug/plugins.vim
 source $nvimpath/general/settings.vim
+source $nvimpath/general/functions.vim
 source $nvimpath/keys/mappings.vim
 
 if exists('g:vscode')
@@ -38,6 +40,5 @@ else
     "Themes
     source $nvimpath/plug-config/airline.vim
     source $nvimpath/themes/nord.vim
-
 endif
 

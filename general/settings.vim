@@ -1,8 +1,10 @@
-" required as NVIM 0.4.4 on windows can't see the python3.8 path
-let g:python3_host_prog = 'c:\python38\python.exe'
+" required as NVIM 0.4.4+ on windows can't see the python3.8 path
+if g:os == "Windows"
+    let g:python3_host_prog = 'c:\python38\python.exe'
+endif
 
 " set the default gui font for vim/nvim
-set guifont=mononoki\ Nerd\ Font
+" set guifont=mononoki\ Nerd\ Font
 
 "Allow project specific .vimrc execution
 set exrc
@@ -55,25 +57,11 @@ set list
 " 4 spaces indentation
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4
 
-" Deal with unwanted white spaces (show them in red)
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 " Syntax settings
 syntax on
 syntax enable
 
 filetype plugin indent on
-
-" auto source when writing to init.vm alternatively you can run :source $MYVIMRC"
-au! BufWritePost $MYVIMRC source %
-
-" auto save on exit or tabbing to another app
-au FocusLost * :wa
 
 "Disable unsafe commands since we are allowing project specific .vimrc file execution
 set secure
@@ -87,12 +75,4 @@ set splitbelow
 
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
-
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-    vsplit term://powershell
-endfunction
-nnoremap <c-a> :call OpenTerminal()<CR>clear<CR>
 

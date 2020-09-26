@@ -18,3 +18,8 @@ let g:OmniSharp_popup_options = {
 \ 'padding': [1],
 \ 'border': [1]
 \}
+
+let g:OmniSharp_highlight_groups = {
+\ 'ClassName': 'Include'
+\}
+
