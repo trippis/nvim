@@ -8,6 +8,9 @@ inoremap kj <ESC>
 vnoremap kj <ESC>
 nnoremap <leader><space> :noh<CR>
 nnoremap ; :
+nnoremap D d$
+nnoremap H 0
+nnoremap L $
 
 " custom mappings
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>

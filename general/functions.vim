@@ -35,7 +35,7 @@ elseif g:os == "Windows" && $TERM == 'vtpcon'
         vsplit term://powershell
     endfunction
 
-    nnoremap <c-n> :call OpenTerminal()<CR>clear<CR>
+    nnoremap <c-a> :call OpenTerminal()<CR>clear<CR>
 else
 
     " uses bash on mac/linux
@@ -44,7 +44,7 @@ else
         resize 10
     endfunction
 
-    nnoremap <c-n> :call OpenTerminal()<CR>
+    nnoremap <c-a> :call OpenTerminal()<CR>
 endif
 
 
