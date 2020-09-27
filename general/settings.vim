@@ -73,6 +73,6 @@ set clipboard=unnamedplus
 set splitright
 set splitbelow
 
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
+" turn terminal to normal mode with ctrl-c
+tnoremap <C-c> <C-\><C-n>
 
