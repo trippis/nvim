@@ -1,6 +1,6 @@
 if g:os == "Windows"
     let $plugpath = '~/AppData/Local/nvim/plugged'
-else 
+else
     let $plugpath = '~/.config/nvim/plugged'
 endif
 
@@ -17,8 +17,10 @@ call plug#begin($plugpath)
         " Better syntax support
         Plug 'sheerun/vim-polyglot'
         " File Explorer and icons
-        Plug 'scrooloose/NERDTree'
-        Plug 'ryanoasis/vim-devicons'
+        Plug 'preservim/nerdtree' |
+                    \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+                    \ Plug 'ryanoasis/vim-devicons' |
+                    \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
         " Status lines
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
@@ -30,6 +32,7 @@ call plug#begin($plugpath)
         " Brackets - pairs and colours
         Plug 'jiangmiao/auto-pairs'
         Plug 'junegunn/rainbow_parentheses.vim'
+        Plug 'tpope/vim-surround'
         "Git integration
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'mhinz/vim-signify'
@@ -42,7 +45,9 @@ call plug#begin($plugpath)
         Plug 'honza/vim-snippets'
         Plug 'mattn/emmet-vim'
         " Fuzzy finder
-        Plug 'ctrlpvim/ctrlp.vim'
+        Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+        Plug 'junegunn/fzf.vim'
+        Plug 'airblade/vim-rooter'
         " C# development
         Plug 'OmniSharp/omnisharp-vim'
         Plug 'nickspoons/vim-sharpenup'

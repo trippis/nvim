@@ -36,6 +36,7 @@ else
     source $nvimpath/plug-config/ctrlsf.vim
     source $nvimpath/plug-config/signify.vim
     source $nvimpath/plug-config/start-screen.vim
+    source $nvimpath/plug-config/fzf.vim
 
     "Themes
     source $nvimpath/plug-config/airline.vim
