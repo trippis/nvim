@@ -4,13 +4,13 @@ au! BufWritePost $MYVIMRC source %
 " auto save on exit or tabbing to another app
 au FocusLost * :wa
 
-" Deal with unwanted white spaces (show them in red)
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+" " Deal with unwanted white spaces (show them in red)
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$/
+" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd BufWinLeave * call clearmatches()
 
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif

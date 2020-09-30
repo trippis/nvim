@@ -76,3 +76,4 @@ set splitbelow
 " turn terminal to normal mode with ctrl-c
 tnoremap <C-c> <C-\><C-n>
 
+set wildchar=<Tab> wildmenu wildmode=full

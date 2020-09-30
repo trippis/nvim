@@ -5,17 +5,16 @@ else
 endif
 
 call plug#begin($plugpath)
-    " Better comments
-    Plug 'tpope/vim-commentary'
 
     if exists('g:vscode')
         " Easy motion for VSCode
         Plug 'asvetliakov/vim-easymotion'
         Plug 'machakann/vim-highlightedyank'
     else
-
         " Better syntax support
         Plug 'sheerun/vim-polyglot'
+        " Better comments
+        Plug 'tpope/vim-commentary'
         " File Explorer and icons
         Plug 'preservim/nerdtree' |
                     \ Plug 'Xuyuanp/nerdtree-git-plugin' |

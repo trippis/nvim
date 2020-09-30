@@ -1,6 +1,24 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": [ "javascript", "typescript", "json", "typescriptreact", "javascriptreact", "typescript.tsx", "css", "markdown" ],
-    "eslint.filetypes": [ "javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx" ],
-    "diagnostic.virtualText": true,
-    "suggest.noselect": false
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "json",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx",
+    "css",
+    "markdown",
+    "html"
+  ],
+  "prettier.eslintIntegration": true,
+  "prettier.formatterPriority": 1,
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "diagnostic.virtualText": true,
+  "suggest.noselect": false
 }
