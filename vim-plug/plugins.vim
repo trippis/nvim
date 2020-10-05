@@ -29,17 +29,14 @@ call plug#begin($plugpath)
         Plug 'joshdick/onedark.vim'
         Plug 'mhartington/oceanic-next'
         " Brackets - pairs and colours
-        Plug 'jiangmiao/auto-pairs'
-        Plug 'junegunn/rainbow_parentheses.vim'
         Plug 'tpope/vim-surround'
         "Git integration
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'mhinz/vim-signify'
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-rhubarb'
         Plug 'junegunn/gv.vim'
-        " See what keys do like in emacs
-        Plug 'liuchengxu/vim-which-key'
+        " Code completion and language servers
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
         " Snippets
         Plug 'honza/vim-snippets'
         Plug 'mattn/emmet-vim'
@@ -48,13 +45,13 @@ call plug#begin($plugpath)
         Plug 'junegunn/fzf.vim'
         Plug 'airblade/vim-rooter'
         " C# development
-        Plug 'OmniSharp/omnisharp-vim'
-        Plug 'nickspoons/vim-sharpenup'
+        Plug 'OmniSharp/omnisharp-vim' |
+                    \ Plug 'nickspoons/vim-sharpenup'
         " Databases
         Plug 'tpope/vim-dadbod'
         Plug 'kristijanhusak/vim-dadbod-ui'
-        " Ag powered code search/view tool
-        Plug 'dyng/ctrlsf.vim'
+        " Code debugging
+        Plug 'puremourning/vimspector'
         " Start screen
         Plug 'mhinz/vim-startify'
 

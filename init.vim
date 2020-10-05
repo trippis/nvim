@@ -17,8 +17,8 @@ endif
 
 source $nvimpath/vim-plug/plugins.vim
 source $nvimpath/general/settings.vim
-source $nvimpath/general/functions.vim
 source $nvimpath/keys/mappings.vim
+source $nvimpath/general/functions.vim
 
 if exists('g:vscode')
 
@@ -37,6 +37,7 @@ else
     source $nvimpath/plug-config/signify.vim
     source $nvimpath/plug-config/start-screen.vim
     source $nvimpath/plug-config/fzf.vim
+    source $nvimpath/plug-config/vimspector.vim
 
     "Themes
     source $nvimpath/plug-config/airline.vim
